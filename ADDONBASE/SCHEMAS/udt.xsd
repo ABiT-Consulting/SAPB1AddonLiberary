@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://udt.org" targetNamespace="http://udt.org" elementFormDefault="qualified">
+  <!-- XML Schema Generated from XML Document on Sat Nov 10 2018 02:20:17 GMT+0500 (Pakistan Standard Time) -->
+  <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+  <xsd:element name="BOM">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="BO">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AdmInfo">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Object" type="xsd:int" nillable ="false" fixed ="153"></xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="OUTB">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="row" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="TableName">
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="19" />
+                                <xsd:minLength value="1" />
+                                <xsd:pattern value="[^\r\n\t ]*"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="Descr"  >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="30" />
+                                <xsd:minLength value="1" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="ObjectType" >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:integer">
+                                <xsd:enumeration value ="0" id="bott_NoObject"/>
+                                <xsd:enumeration value ="1" id="bott_MasterData"/>
+                                <xsd:enumeration value ="2" id="bott_MasterDataLines"/>
+                                <xsd:enumeration value ="3" id="bott_Document"/>
+                                <xsd:enumeration value ="4" id="bott_DocumentLines"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="Archivable" >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="Name" type="xsd:string" use ="required"></xsd:attribute>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="ADDONBASE.Menu" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAABAAAgAAEGAAgAAAAAAAAABAAQ=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ADDONBASE.ConnectToB1" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAggAAAAAQQAAAAAAAAAAQgAAAAAAAAAAAAACAAAg=</HashCode>
+      <FileName>Initializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ADDONBASE.Initializer">
+    <Position X="10.25" Y="1.75" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>GAwkVABEUAAEAQEwQAoAZMiAIAAAAABACQAICAyACAQ=</HashCode>
+      <FileName>Initializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ADDONBASE.BaseHandler" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="6.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>CQdfHiq5aXVRgMVMw8sTkiJiLWliQxSCxAPohkgkpIk=</HashCode>
+      <FileName>BusinessLogic\BaseForm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="udCreatorfromXML.UDTCreator" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABBAAAEQAAAACQAAAAAAAAAAABACA=</HashCode>
+      <FileName>udcreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="udCreatorfromXML.UDOCreator" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAACAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>udcreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="udCreatorfromXML.udcreator">
+    <Position X="8.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAADAAAAAAAAAEAAEAACQAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>udcreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ADDONBASE._Initializer">
+    <Position X="15.25" Y="2.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAgAAEAAAEIEQQAAAAAAAAAAAACgACAAABQEAAAA=</HashCode>
+      <FileName>_Initializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ADDONBASE.BusinessLogic._BaseForm">
+    <Position X="0.75" Y="4.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessLogic\_BaseForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ADDONBASE._UDOFormBase">
+    <Position X="2" Y="5.75" Width="7.75" />
+    <TypeIdentifier>
+      <HashCode>CQgAjAohQRABCAAOggICgABCAAAgABAAoAEABSAgoAA=</HashCode>
+      <FileName>_UDOFormBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

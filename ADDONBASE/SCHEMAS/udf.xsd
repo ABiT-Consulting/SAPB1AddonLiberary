@@ -1,0 +1,155 @@
+﻿<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://udf.org" targetNamespace="http://udf.org" elementFormDefault="qualified">
+  <xsd:element name="BOM">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="BO">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AdmInfo">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Object" type="xsd:int" nillable ="false" fixed ="152" ></xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="CUFD">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="row" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="TableName"  >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="19" />
+                                <xsd:minLength value="1" />
+                                <xsd:pattern value="[^\r\n\t ]*"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="Name"  >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                                <xsd:minLength value="1" />
+                                <xsd:pattern value="[^\r\n\t ]*"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="Description" >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="80" />
+                                <xsd:minLength value="1" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element nillable="true"   maxOccurs="unbounded" minOccurs ="0" name="LinkedTable" >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="50" />
+                                <xsd:minLength value="1" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element> 
+                          <xsd:element name="Mandatory" nillable ="false" default ="Y">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:token">
+                                <xsd:enumeration value="Y"/>
+                                <xsd:enumeration value="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="Type">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:token">
+                                <xsd:enumeration value="A" />
+                                <xsd:enumeration value="M"/>
+                                <xsd:enumeration value="F"/>
+                                <xsd:enumeration value="N"/>
+                                <xsd:enumeration value="D"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                            
+                          </xsd:element>
+                          <xsd:element name="Size" >
+                            <xsd:simpleType>
+                            <xsd:restriction base="xsd:integer">
+                              <xsd:minInclusive value="0"/>
+                              <xsd:maxInclusive value="254"/>
+                            </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="EditSize" type="xsd:int"></xsd:element>
+                          <xsd:element name="SubType" >
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:token">
+                                <xsd:enumeration value="0" id ="st_None" />
+                                <xsd:enumeration value="35" id="st_Phone"/>
+                                <xsd:enumeration value="37" id="st_Percentage"/>
+                                <xsd:enumeration value="63" id ="st_Address"/>
+                                <xsd:enumeration value="66" id ="st_Link"/>
+                                <xsd:enumeration value="73" id ="st_Image"/>
+                                <xsd:enumeration value="77" id ="st_Measurement"/>
+                                <xsd:enumeration value="80" id ="st_Price"/>
+                                <xsd:enumeration value="81" id ="st_Quantity"/>
+                                <xsd:enumeration value="82" id ="st_Rate"/>
+                                <xsd:enumeration value="83" id ="st_Sum"/>
+                                <xsd:enumeration value="84" id ="st_Time"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+
+                          <xsd:element name="DefaultValue"  minOccurs ="0">
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="254" />
+                                <xsd:minLength value="1" />
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+
+                          <xsd:element name="ValidValues"  maxOccurs ="unbounded" minOccurs="0">
+                            <xsd:complexType >
+                              <xsd:sequence>
+                                
+                              <xsd:element name="Value"  minOccurs ="0">
+                                <xsd:simpleType >
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="254" />
+                                    <xsd:minLength value="1" />
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                                <xsd:element name="Description"  minOccurs ="0">
+                                  <xsd:simpleType >
+                                    <xsd:restriction base="xsd:string">
+                                      <xsd:maxLength value="254" />
+                                      <xsd:minLength value="1" />
+                                    </xsd:restriction>
+                                  </xsd:simpleType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+
+                              <!--ValidValues-->
+                          <!--<ValidValues>
+                            <Value>Pending</Value>
+                            <Description>Pending</Description>
+                          </ValidValues>-->
+                        </xsd:sequence>
+                        <xsd:attribute name="resolved" type="xsd:string" default ="N"></xsd:attribute>
+                        <xsd:attribute name="Name" type="xsd:string" use ="required"></xsd:attribute>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

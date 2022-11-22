@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://udo.org" targetNamespace="http://udo.org" elementFormDefault="qualified">
+  <!-- XML Schema Generated from XML Document on Sat Nov 10 2018 02:44:18 GMT+0500 (Pakistan Standard Time) -->
+  <!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+  <xsd:element name="BOM">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="BO">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="AdmInfo">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Object" type="xsd:int" fixed ="206"></xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="OUDO">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="row" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Code" >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="40" />
+                                <xsd:minLength value="1" />
+                                <xsd:pattern value="[^\r\n\t ]*"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="Name"  >
+                            <xsd:simpleType >
+                              <xsd:restriction base="xsd:string">
+                                <xsd:maxLength value="200" />
+                                <xsd:minLength value="1" />
+                                <xsd:pattern value="[^\r\n\t ]*"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="ObjectType" >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:integer">
+                                <xsd:enumeration value ="0"/>
+                                <xsd:enumeration value ="1"/>
+                                <xsd:enumeration value ="2"/>
+                                <xsd:enumeration value ="3"/>
+                                <xsd:enumeration value ="4"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="TableName" type="xsd:string" nillable ="false"></xsd:element>
+                          <xsd:element name="LogTableName" type="xsd:string" nillable ="false"></xsd:element>
+                          <xsd:element name="ManageSeries">
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanDelete"  >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanClose">
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanCancel"  >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanCreateDefaultForm"  >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          
+                          <xsd:element name="MenuItem" type="xsd:string"   minOccurs ="0"></xsd:element>
+                          <xsd:element name="MenuCaption" type="xsd:string" minOccurs ="0" ></xsd:element>
+                          <xsd:element name="Position" type="xsd:int"></xsd:element>
+                          <!--RebuildEnhancedForm-->
+                          <xsd:element name="RebuildEnhancedForm" minOccurs ="0"  >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanCreateDefaultForm"  >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanLog"  >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanFind" >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="CanYearTransfer" >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="FormColumnAlias" >
+                            <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Code"/>
+                                <xsd:enumeration value ="DocEntry"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                          <xsd:element name="FormColumnDescription" type ="xsd:string">
+                            
+                          </xsd:element>
+                          <xsd:element name="ChildTables" minOccurs="0" maxOccurs ="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="TableName" type="xsd:string"></xsd:element>
+                                <xsd:element name="LogTableName" type="xsd:string"></xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="resolved"  > <xsd:simpleType>
+                              <xsd:restriction base ="xsd:string">
+                                <xsd:enumeration value ="Y"/>
+                                <xsd:enumeration value ="N"/>
+                              </xsd:restriction>
+                            </xsd:simpleType></xsd:attribute>
+                        <xsd:attribute name="Name" type="xsd:string"></xsd:attribute>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
