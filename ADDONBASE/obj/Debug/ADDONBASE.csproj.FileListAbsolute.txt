@@ -1,0 +1,12 @@
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\obj\Debug\ADDONBASE.csproj.AssemblyReference.cache
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\obj\Debug\ADDONBASE.csproj.CoreCompileInputs.cache
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\SPCLIENT\TC_Functions_fnGetSAPTime.sql
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\Stored_Procedure\TC_Extensions_GetWHS.sql
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\srf\crdlimit.srf
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\ADDONBASE.dll.config
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\ADDONBASE.dll
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\ADDONBASE.pdb
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\bin\Debug\X86\SAPBusinessOneSDK.dll
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\obj\Debug\ADDONBASE.csproj.CopyComplete
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\obj\Debug\ADDONBASE.dll
+D:\Code\ABiT\SAPB1AddonLiberary\ADDONBASE\obj\Debug\ADDONBASE.pdb

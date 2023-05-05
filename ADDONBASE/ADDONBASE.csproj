@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ADDONBASE</RootNamespace>
     <AssemblyName>ADDONBASE</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -56,7 +56,7 @@
   <ItemGroup>
     <Reference Include="SAPBusinessOneSDK, Version=1.0.0.1, Culture=neutral, PublicKeyToken=c7c3cb60e45d119f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\SAPBusinessOneSDK.dll</HintPath>
+      <HintPath>C:\Program Files\SAP\SAP Business One\SAPBusinessOneSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -72,6 +72,8 @@
   <ItemGroup>
     <Compile Include="AddFormattedSearch.cs" />
     <Compile Include="AddStoredProcedures.cs" />
+    <Compile Include="Attributes\FieldNameAttribute.cs" />
+    <Compile Include="Attributes\TableNameAttribute.cs" />
     <Compile Include="BusinessLogic\BaseForm.cs" />
     <Compile Include="BusinessLogic\PLDAdder.cs" />
     <Compile Include="BusinessLogic\UserDefinedObject.cs" />
