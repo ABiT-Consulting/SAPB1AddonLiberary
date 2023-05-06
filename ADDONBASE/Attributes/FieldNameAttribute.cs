@@ -5,18 +5,19 @@ namespace ADDONBASE.Attributes
 {
     public class FieldNameAttribute : Attribute
     {
-        private string FieldName;
-        private BoFieldTypes boFieldTypes;
-        private BoFldSubTypes boFldSubTypes;
-        private string FieldDescription;
-        private int size;
-        public FieldNameAttribute(string FieldName,string FieldDescription, BoFieldTypes boFieldTypes, BoFldSubTypes boFldSubTypes,int size = -1)
+        public string Name { get; private set; }
+        public string Description { get; private set; }
+        public BoFieldTypes FieldType { get; private set; }
+        public BoFldSubTypes FieldSubType { get; private set; }
+        public int Size { get; private set; }
+
+        public FieldNameAttribute(string fieldName, string fieldDescription, BoFieldTypes fieldType, BoFldSubTypes fieldSubType, int size = -1)
         {
-            this.FieldName = FieldName;
-            this.boFieldTypes = boFieldTypes;
-            this.boFldSubTypes = boFldSubTypes;
-            this.size = size;
-            this.FieldDescription = FieldDescription;
+            Name = fieldName;
+            Description = fieldDescription;
+            FieldType = fieldType;
+            FieldSubType = fieldSubType;
+            Size = size;
         }
     }
 }

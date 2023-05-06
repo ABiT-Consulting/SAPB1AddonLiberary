@@ -415,6 +415,7 @@ namespace ADDONBASE
                  catch (Exception ex) { ex.AppendInLogFile(); }
                  if (goIN)
                  {
+
                      try
                      {
                          var files = Directory.GetFiles(System.Windows.Forms.Application.StartupPath + "\\SCHEMAS\\");

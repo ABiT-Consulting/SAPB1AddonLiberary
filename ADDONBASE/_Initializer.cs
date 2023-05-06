@@ -437,6 +437,46 @@ namespace ADDONBASE
                 catch (Exception ex) { ex.AppendInLogFile(); }
                 if (goIN)
                 {
+                    var assembly = Assembly.GetEntryAssembly();
+                    List<string> classNamesUDT = new List<string>();
+                    List<string> classNamesUDF = new List<string>();
+                    List<string> classNamesUDO = new List<string>();
+
+                    foreach(Type type in assembly.GetTypes())
+                    {
+                        if (Attribute.IsDefined(type, typeof(Attributes.TableNameAttribute)) && !type.IsAbstract && !type.IsInterface)
+                        {
+                            classNamesUDT.Add(type.FullName+", "+ assembly.FullName);
+                        }
+                    }
+                    foreach (var type in assembly.GetTypes())
+                    {
+                        if (Attribute.IsDefined(type, typeof(Attributes.TableNameAttribute)) && !type.IsAbstract && !type.IsInterface)
+                        {
+                            classNamesUDF.Add(type.FullName + ", " + assembly.FullName);
+                        }
+
+                    }
+                    foreach (Type type in assembly.GetTypes())
+                    {
+                        if (Attribute.IsDefined(type, typeof(Attributes.UDONameAttribute)) && !type.IsAbstract && !type.IsInterface)
+                        {
+                            classNamesUDO.Add(type.FullName + ", " + assembly.FullName);
+                        }
+                    }
+                    foreach(var classname in classNamesUDT)
+                    {
+                        BusinessLogic.SAPB1Helper.CreateUDT(classname, Company);
+                    }
+                    foreach(var classname in classNamesUDF)
+                    {
+                        BusinessLogic.SAPB1Helper.CreateUDF(classname, Company);
+                    }
+                    //get all class names from the classes having attribute UDONameAttribute
+                    foreach (var className in classNamesUDO)
+                    {
+                        BusinessLogic.SAPB1Helper.CreateUDO(className, Company);
+                    }
                     try
                     {
                         var files = Directory.GetFiles(System.Windows.Forms.Application.StartupPath + "\\SCHEMAS\\");

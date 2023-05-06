@@ -74,8 +74,10 @@
     <Compile Include="AddStoredProcedures.cs" />
     <Compile Include="Attributes\FieldNameAttribute.cs" />
     <Compile Include="Attributes\TableNameAttribute.cs" />
+    <Compile Include="Attributes\UDONameAttribute.cs" />
     <Compile Include="BusinessLogic\BaseForm.cs" />
     <Compile Include="BusinessLogic\PLDAdder.cs" />
+    <Compile Include="BusinessLogic\SAPB1Helper.cs" />
     <Compile Include="BusinessLogic\UserDefinedObject.cs" />
     <Compile Include="BusinessLogic\WindowWrapper.cs" />
     <Compile Include="BusinessLogic\_BaseForm.cs" />
