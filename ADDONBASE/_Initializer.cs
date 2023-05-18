@@ -563,17 +563,23 @@ namespace ADDONBASE
                     if (System.Diagnostics.Debugger.IsAttached)
                     {
                         var udosCSV = UDONames.List2CSV();
-                        var recset = Company.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset) as SAPbobsCOM.Recordset;
-                        recset.DoQuery(string.Format(@"select ""Code"", ""NewFormSrf"" from oudo where ""Code"" in ({0})", udosCSV));
-                        while (!recset.EoF)
+                        if (!string.IsNullOrEmpty(udosCSV))
                         {
-                            var Code = recset.Fields.Item(0).Value.ToString();
-                            var NewFormSrf = recset.Fields.Item(1).Value.ToString();
+                            var recset = Company.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset) as SAPbobsCOM.Recordset;
+                            recset.DoQuery(string.Format(@"select ""Code"", ""NewFormSrf"" from oudo where ""Code"" in ({0})", udosCSV));
+                            while (!recset.EoF)
+                            {
+                                var Code = recset.Fields.Item(0).Value.ToString();
+                                var NewFormSrf = recset.Fields.Item(1).Value.ToString();
 
-                            System.IO.File.WriteAllText(Path.Combine("Forms", Code + ".srf"), NewFormSrf);
-                            recset.MoveNext();
+                                System.IO.File.WriteAllText(Path.Combine("Forms", Code + ".srf"), NewFormSrf);
+                                recset.MoveNext();
+                            }
+                            Marshal.ReleaseComObject(recset);
+
                         }
-                        Marshal.ReleaseComObject(recset);
+
+
                     }
                 }
                 catch (Exception ex)
@@ -875,6 +881,8 @@ namespace ADDONBASE
                 }
                 return _Company;
             }
+            set
+            { _Company = value; }
 
         }
         internal static List<string> UDONames

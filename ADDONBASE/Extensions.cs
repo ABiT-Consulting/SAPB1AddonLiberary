@@ -11,6 +11,63 @@ namespace ADDONBASE.Extensions
 {
     public static class Extensions
     {
+        public static void checkAll(this SAPbouiCOM.Grid grid, bool check = true, string colId = "selct")
+        {
+            XDocument doc = XDocument.Parse(grid.DataTable.GetAsXML().ToString());
+            var query = doc.Descendants("Query").First().Value;
+           
+            string newQuery = check ? query.Replace($"'N' AS \"{colId}\"", $"'Y' AS \"{colId}\"") : query.Replace($"'Y' AS \"{colId}\"", $"'N' AS \"{colId}\"");
+            grid.DataTable.ExecuteQuery(newQuery);
+            var col = grid.Columns.Item(colId);
+            col.TitleObject.Caption = "Select";
+            col.Type = SAPbouiCOM.BoGridColumnType.gct_CheckBox;
+            grid.RowHeaders.Width = 0;
+
+            var recset = ADDONBASE._Initializer.Company.GetBusinessObject(SAPbobsCOM.BoObjectTypes.BoRecordset) as SAPbobsCOM.Recordset;
+            recset.DoQuery(newQuery);
+            int count = recset.RecordCount;
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(recset);
+
+            for (Int32 i = 1; i <= grid.Rows.Count; i++)
+            {
+                var dtindex = grid.GetDataTableRowIndex(i - 1);
+                var cellval = grid.DataTable.GetValue("selct", dtindex);
+          
+
+                if (cellval.ToString().ToLower() == "n")
+                {
+                    grid.DataTable.SetValue("selct", dtindex, "N");
+                }
+                else
+                {
+                    grid.Rows.SelectedRows.Add(dtindex);
+                }
+            }
+        }
+        
+            public static void DisableAllExceptFirst(this SAPbouiCOM.Grid grid)
+            {
+                for (int i = 1; i < grid.Columns.Count; i++)
+                {
+                    grid.Columns.Item(i).Editable = false;
+                }
+            }
+        
+
+        public static Dictionary<string, string> getColumns(string name)
+        {
+            var path = System.IO.Directory.GetCurrentDirectory() + "\\Queries\\Columns.xml";
+            var dict = new Dictionary<string, string>();
+
+            var doc = XDocument.Load(path);
+            var vals = doc.Descendants(name).First();
+            foreach (var val in vals.Descendants())
+            {
+                dict.Add(val.Name.ToString(), val.Value);
+            }
+
+            return dict;
+        }
 
         internal static string getObjectKeyFromXML(String XML)
         {

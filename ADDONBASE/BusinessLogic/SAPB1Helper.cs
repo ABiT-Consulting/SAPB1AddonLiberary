@@ -42,9 +42,12 @@ namespace ADDONBASE.BusinessLogic
 
                 if (fieldNameAttribute != null)
                 {
+                    if (!fieldNameAttribute.Name.StartsWith("U_"))
+                        continue;
+                    var fieldname = fieldNameAttribute.Name.Substring(2);
                     UserFieldsMD userField = (UserFieldsMD)company.GetBusinessObject(BoObjectTypes.oUserFields);
                     userField.TableName = tableNameAttribute.TableName;
-                    userField.Name = fieldNameAttribute.Name;
+                    userField.Name = fieldname;
                     userField.Description = fieldNameAttribute.Description;
                     userField.Type = fieldNameAttribute.FieldType;
                     userField.SubType = fieldNameAttribute.FieldSubType;
