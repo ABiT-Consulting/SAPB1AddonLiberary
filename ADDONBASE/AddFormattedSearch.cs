@@ -1,4 +1,4 @@
-﻿using ADDONBASE.Extensions;
+using ADDONBASE.Extensions;
 using SAPbobsCOM;
 using SAPbouiCOM;
 using System;
@@ -23,6 +23,27 @@ namespace ADDONBASE
     public class CAddFormattedSearch
     {
 
+        private void RemoveFormattedSearch(string formId, string itemId)
+        {
+            var B1Comp = _Initializer.Company;
+            FormattedSearches fs = (FormattedSearches)B1Comp.GetBusinessObject(BoObjectTypes.oFormattedSearches);
+            
+            int count = fs.Browser.RecordCount;
+            for (int i = 0; i < count; i++)
+            {
+                
+                if (fs.GetByKey(i))
+                {
+                    if (fs.Remove() != 0)
+                    {
+                        B1Comp.GetLastErrorDescription().PrintString();
+                    }
+                    break;
+                }
+                fs.Browser.MoveNext();
+            }
+        }
+
         private string AddFormattedSearch(string zFormID,
               string zItemID,
               string zTargetColumn,
@@ -32,6 +53,7 @@ namespace ADDONBASE
               BoYesNoEnum zForceRefresh,
               string zFieldName = "")
         {
+            RemoveFormattedSearch(zFormID, zItemID);
             var B1Comp = _Initializer.Company;
             FormattedSearches fs = (FormattedSearches)B1Comp.GetBusinessObject(BoObjectTypes.oFormattedSearches);
 
@@ -96,7 +118,7 @@ namespace ADDONBASE
             rs.DoQuery(s);
             if (!rs.EoF)
             {
-                qryID = (long)rs.Fields.Item("IntrnalKey").Value;
+                qryID =Convert.ToInt64( rs.Fields.Item("IntrnalKey").Value);
             }
             else
             {
@@ -130,7 +152,7 @@ namespace ADDONBASE
                     }
                     catch (Exception ex2)
                     {
-                        //B1App.MessageBox(ex2.ToString)
+                         
                     }
 
                 }
@@ -142,7 +164,7 @@ namespace ADDONBASE
 
             }
 
-            System.Runtime.InteropServices.Marshal.ReleaseComObject(rs); GC.Collect();
+            System.Runtime.InteropServices.Marshal.ReleaseComObject(rs); // 
             return qryID;
 
         }
