@@ -2,6 +2,8 @@ using ADDONBASE.Extensions;
 using SAPbobsCOM;
 using SAPbouiCOM;
 using System;
+using System.Runtime.InteropServices;
+
 namespace ADDONBASE
 {
     public struct SearchParams
@@ -43,6 +45,28 @@ namespace ADDONBASE
                 }
             } 
         }
+        private bool FormattedSearchExists(string formId, string itemId)
+        {
+            var B1Comp = _Initializer.Company;
+            Recordset rs = (Recordset)B1Comp.GetBusinessObject(BoObjectTypes.BoRecordset);
+            bool result;
+
+            try
+            {
+                string query = $"SELECT \"IndexID\" FROM \"CSHS\" WHERE \"FormID\" = '{formId}' AND \"ItemID\" = '{itemId}'";
+                rs.DoQuery(query);
+
+                result = !rs.EoF;
+            }
+            finally
+            {
+                // Always ensure the COM object is released.
+                Marshal.ReleaseComObject(rs);
+            }
+
+            return result;
+        }
+
 
         private string AddFormattedSearch(string zFormID,
               string zItemID,
@@ -54,7 +78,12 @@ namespace ADDONBASE
               string zFieldName = "")
         {
             
-            RemoveFormattedSearch(zFormID, zItemID);
+            //RemoveFormattedSearch(zFormID, zItemID);
+
+            if(FormattedSearchExists(zFormID, zItemID))
+            {
+                return "-1";
+            }
             var B1Comp = _Initializer.Company;
             FormattedSearches fs = (FormattedSearches)B1Comp.GetBusinessObject(BoObjectTypes.oFormattedSearches);
 
