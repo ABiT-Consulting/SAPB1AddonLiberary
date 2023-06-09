@@ -27,21 +27,21 @@ namespace ADDONBASE
         {
             var B1Comp = _Initializer.Company;
             FormattedSearches fs = (FormattedSearches)B1Comp.GetBusinessObject(BoObjectTypes.oFormattedSearches);
-            
-            int count = fs.Browser.RecordCount;
-            for (int i = 0; i < count; i++)
+              //select IndedID from CSHS where FormID = '150' and ItemID = '38'
+            var s = string.Format("select \"IndexID\" from \"CSHS\" where \"FormID\" = '{0}' and \"ItemID\" = '{1}'", formId, itemId);
+            Recordset rs = B1Comp.GetBusinessObject(BoObjectTypes.BoRecordset) as Recordset;
+            rs.DoQuery(s);
+            if (!rs.EoF)
             {
-                
-                if (fs.GetByKey(i))
+                var indexId =Convert.ToInt32( rs.Fields.Item("IndexID").Value);
+                if (fs.GetByKey(indexId))
                 {
                     if (fs.Remove() != 0)
                     {
                         B1Comp.GetLastErrorDescription().PrintString();
                     }
-                    break;
                 }
-                fs.Browser.MoveNext();
-            }
+            } 
         }
 
         private string AddFormattedSearch(string zFormID,
@@ -53,6 +53,7 @@ namespace ADDONBASE
               BoYesNoEnum zForceRefresh,
               string zFieldName = "")
         {
+            
             RemoveFormattedSearch(zFormID, zItemID);
             var B1Comp = _Initializer.Company;
             FormattedSearches fs = (FormattedSearches)B1Comp.GetBusinessObject(BoObjectTypes.oFormattedSearches);
