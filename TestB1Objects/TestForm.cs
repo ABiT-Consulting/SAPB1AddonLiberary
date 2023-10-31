@@ -4,6 +4,7 @@ using SAPbobsCOM;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Odbc;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -744,13 +745,27 @@ namespace TestB1Objects
             connection.Open();
             // run sql command set schema schema
             var command = connection.CreateCommand();
-            command.CommandText = $"set schema {schema}";
+            command.CommandText = $"SET SCHEMA {schema}";
             command.ExecuteNonQuery();
             // run sql command select * from table
-            command.CommandText = $"select top 1 * from oitm";
-            var reader = command.ExecuteReader();
+            command.CommandText = $@"select * from ""OITM""";
+           
             var table = new DataTable();
-            table.Load(reader);
+            try
+            {
+               // table.Load(reader);
+                using (var odbcDataAdapter = new OdbcDataAdapter(command))
+                {
+                    odbcDataAdapter.Fill(table);
+                }
+
+              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message+Environment.NewLine+Environment.NewLine+ex.StackTrace);
+                throw;
+            }           
             connection.Close();
             if(table.Rows.Count > 0)
                 MessageBox.Show("Connection Successfull");

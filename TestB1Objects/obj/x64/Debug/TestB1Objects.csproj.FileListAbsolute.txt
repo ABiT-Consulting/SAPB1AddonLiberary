@@ -23,3 +23,13 @@ D:\Code\ABiT\SAP_LIBERARY\TestB1Objects\obj\x64\Debug\TestB1Objects.csproj.CopyC
 D:\Code\ABiT\SAP_LIBERARY\TestB1Objects\obj\x64\Debug\TestB1Objects.exe
 D:\Code\ABiT\SAP_LIBERARY\TestB1Objects\obj\x64\Debug\TestB1Objects.pdb
 D:\Code\ABiT\SAP_LIBERARY\TestB1Objects\bin\x64\Debug\udf.xml
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\bin\x64\Debug\udf.xml
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\bin\x64\Debug\TestB1Objects.exe.config
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\bin\x64\Debug\TestB1Objects.exe
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\bin\x64\Debug\TestB1Objects.pdb
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\obj\x64\Debug\TestB1Objects.csproj.AssemblyReference.cache
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\obj\x64\Debug\TestB1Objects.TestForm.resources
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\obj\x64\Debug\TestB1Objects.csproj.GenerateResource.cache
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\obj\x64\Debug\TestB1Objects.csproj.CoreCompileInputs.cache
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\obj\x64\Debug\TestB1Objects.exe
+C:\AllData\PDFs & Docs\AddOnLibrary\SAPB1AddonLiberary\TestB1Objects\obj\x64\Debug\TestB1Objects.pdb
