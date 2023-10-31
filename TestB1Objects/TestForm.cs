@@ -734,5 +734,27 @@ namespace TestB1Objects
                 connection.Close();
             }
         }
+
+        private void btnTestSchema_Click(object sender, EventArgs e)
+        {
+            var schema = tbDBName.Text;
+            var connectionstring = tbConnectionStringODBC.Text;
+            var connection = new System.Data.Odbc.OdbcConnection(connectionstring);
+
+            connection.Open();
+            // run sql command set schema schema
+            var command = connection.CreateCommand();
+            command.CommandText = $"set schema {schema}";
+            command.ExecuteNonQuery();
+            // run sql command select * from table
+            command.CommandText = $"select top 1 * from oitm";
+            var reader = command.ExecuteReader();
+            var table = new DataTable();
+            table.Load(reader);
+            connection.Close();
+            if(table.Rows.Count > 0)
+                MessageBox.Show("Connection Successfull");
+
+        }
     }
 }

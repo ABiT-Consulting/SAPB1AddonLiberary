@@ -92,6 +92,9 @@
             this.btnConnectODBC = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.tbConnectionStringODBC = new System.Windows.Forms.TextBox();
+            this.btnTestSchema = new System.Windows.Forms.Button();
+            this.tbDBName = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -116,18 +119,18 @@
             // 
             // tbXML
             // 
-            this.tbXML.Location = new System.Drawing.Point(11, 143);
+            this.tbXML.Location = new System.Drawing.Point(11, 201);
             this.tbXML.Margin = new System.Windows.Forms.Padding(2);
             this.tbXML.Multiline = true;
             this.tbXML.Name = "tbXML";
             this.tbXML.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbXML.Size = new System.Drawing.Size(654, 297);
+            this.tbXML.Size = new System.Drawing.Size(654, 239);
             this.tbXML.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 127);
+            this.label2.Location = new System.Drawing.Point(11, 181);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
@@ -718,11 +721,40 @@
             this.tbConnectionStringODBC.Size = new System.Drawing.Size(429, 20);
             this.tbConnectionStringODBC.TabIndex = 81;
             // 
+            // btnTestSchema
+            // 
+            this.btnTestSchema.Location = new System.Drawing.Point(567, 117);
+            this.btnTestSchema.Name = "btnTestSchema";
+            this.btnTestSchema.Size = new System.Drawing.Size(75, 23);
+            this.btnTestSchema.TabIndex = 82;
+            this.btnTestSchema.Text = "Test DB Schema";
+            this.btnTestSchema.UseVisualStyleBackColor = true;
+            this.btnTestSchema.Click += new System.EventHandler(this.btnTestSchema_Click);
+            // 
+            // tbDBName
+            // 
+            this.tbDBName.Location = new System.Drawing.Point(367, 119);
+            this.tbDBName.Name = "tbDBName";
+            this.tbDBName.Size = new System.Drawing.Size(177, 20);
+            this.tbDBName.TabIndex = 83;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(267, 122);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(58, 9);
+            this.label23.TabIndex = 84;
+            this.label23.Text = "Database Name:";
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 525);
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.tbDBName);
+            this.Controls.Add(this.btnTestSchema);
             this.Controls.Add(this.tbConnectionStringODBC);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.btnConnectODBC);
@@ -862,5 +894,8 @@
         private System.Windows.Forms.Button btnConnectODBC;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox tbConnectionStringODBC;
+        private System.Windows.Forms.Button btnTestSchema;
+        private System.Windows.Forms.TextBox tbDBName;
+        private System.Windows.Forms.Label label23;
     }
 }
