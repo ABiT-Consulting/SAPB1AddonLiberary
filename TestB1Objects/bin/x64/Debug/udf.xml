@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BOM>
+  <BO>
+    <AdmInfo>
+      <Object>152</Object>
+    </AdmInfo>
+    <CUFD>
+      <row resolved="N" Name="WAKey">
+        <TableName>OUSR</TableName>
+        <Name>WAKey</Name>
+        <Description>WhatsApp Key</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>50</Size>
+        <EditSize>0</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="DomainUserName">
+        <TableName>OUSR</TableName>
+        <Name>DomainUserName</Name>
+        <Description>Domain UserName</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="Sent">
+        <TableName>WDD1</TableName>
+        <Name>Sent</Name>
+        <Description>Message Status</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="MID">
+        <TableName>WDD1</TableName>
+        <Name>MID</Name>
+        <Description>MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="RMID">
+        <TableName>WDD1</TableName>
+        <Name>RMID</Name>
+        <Description>RMID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="RM">
+        <TableName>WDD1</TableName>
+        <Name>RM</Name>
+        <Description>RM</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="Sent">
+        <TableName>OALR</TableName>
+        <Name>Sent</Name>
+        <Description>Sent</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="InvalidReply">
+        <TableName>WDD1</TableName>
+        <Name>InvalidReply</Name>
+        <Description>InvalidReply</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+      </row>
+      <row resolved="N" Name="AlreadyApp">
+        <TableName>WDD1</TableName>
+        <Name>AlreadyApp</Name>
+        <Description>Already Approved</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+      </row>
+      <row resolved="N" Name="InvalidKey">
+        <TableName>WDD1</TableName>
+        <Name>InvalidKey</Name>
+        <Description>Invalid Key</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+      </row>
+      <row resolved="N" Name="LIVKMID">
+        <TableName>WDD1</TableName>
+        <Name>LIVKMID</Name>
+        <Description>Last Invalid KMID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="LIVRMID">
+        <TableName>WDD1</TableName>
+        <Name>LIVRMID</Name>
+        <Description>Last Invalid RMID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="PreRptDate">
+        <TableName>OCRD</TableName>
+        <Name>PreRptDate</Name>
+        <Description>Previous Report Date</Description>
+        <Mandatory>N</Mandatory>
+        <Type>D</Type>
+        <Size>20</Size>
+        <EditSize>20</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="Frequency">
+        <TableName>OCRD</TableName>
+        <Name>Frequency</Name>
+        <Description>Report Frequency</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>2</Size>
+        <EditSize>2</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>3</DefaultValue>
+        <ValidValues>
+          <Value>3</Value>
+          <Description>3 Days</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>7</Value>
+          <Description>7 Days</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>14</Value>
+          <Description>14 Days</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>21</Value>
+          <Description>21 Days</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="Cellular">
+        <TableName>OSHP</TableName>
+        <Name>Cellular</Name>
+        <Description>Cellular</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="IsWA_Allowed">
+        <TableName>OCRD</TableName>
+        <Name>IsWA_Allowed</Name>
+        <Description>WhatsApp Allowed</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>A</DefaultValue>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>S</Value>
+          <Description>Stop</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="IsValid_WA">
+        <TableName>OINV</TableName>
+        <Name>IsValid_WA</Name>
+        <Description>Valid WhatsApp Customer</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>F</Value>
+          <Description>Fail</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="IsWA_Sent">
+        <TableName>OINV</TableName>
+        <Name>IsWA_Sent</Name>
+        <Description>WhatsApp Notified</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>F</Value>
+          <Description>Fail</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="CompanyName">
+        <TableName>OINV</TableName>
+        <Name>CompanyName</Name>
+        <Description>Company Name</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>100</Size>
+        <EditSize>100</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="IsWA_Sent">
+        <TableName>ORCT</TableName>
+        <Name>IsWA_Sent</Name>
+        <Description>WhatsApp Notified</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>F</Value>
+          <Description>Fail</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="IsWA_Sent_Update">
+        <TableName>OINV</TableName>
+        <Name>IsWA_Sent_Update</Name>
+        <Description>WhatsApp Consignment Notified</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>F</Value>
+          <Description>Fail</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="Delivered">
+        <TableName>OINV</TableName>
+        <Name>Delivered</Name>
+        <Description>Delivered</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <DefaultValue>N</DefaultValue>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="IsWA_InitialAsk">
+        <TableName>OINV</TableName>
+        <Name>IsWA_InitialAsk</Name>
+        <Description>Initial Customer Ask</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <ValidValues>
+          <Value>N</Value>
+          <Description>No</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>Y</Value>
+          <Description>Yes</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="salesman_csf">
+        <TableName>OINV</TableName>
+        <Name>salesman_csf</Name>
+        <Description>Salesman_csf</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <ValidValues>
+          <Value>1</Value>
+          <Description>1 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>2</Value>
+          <Description>2 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>3</Value>
+          <Description>3 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>4</Value>
+          <Description>4 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>5</Value>
+          <Description>5 Star</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="responding_csf">
+        <TableName>OINV</TableName>
+        <Name>responding_csf</Name>
+        <Description>Responding_csf</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <ValidValues>
+          <Value>1</Value>
+          <Description>1 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>2</Value>
+          <Description>2 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>3</Value>
+          <Description>3 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>4</Value>
+          <Description>4 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>5</Value>
+          <Description>5 Star</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="delivery_csf">
+        <TableName>OINV</TableName>
+        <Name>delivery_csf</Name>
+        <Description>Delivery_csf</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <ValidValues>
+          <Value>1</Value>
+          <Description>1 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>2</Value>
+          <Description>2 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>3</Value>
+          <Description>3 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>4</Value>
+          <Description>4 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>5</Value>
+          <Description>5 Star</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="services_csf">
+        <TableName>OINV</TableName>
+        <Name>services_csf</Name>
+        <Description>Services_csf</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>1</Size>
+        <EditSize>1</EditSize>
+        <SubType>0</SubType>
+        <ValidValues>
+          <Value>1</Value>
+          <Description>1 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>2</Value>
+          <Description>2 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>3</Value>
+          <Description>3 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>4</Value>
+          <Description>4 Star</Description>
+        </ValidValues>
+        <ValidValues>
+          <Value>5</Value>
+          <Description>5 Star</Description>
+        </ValidValues>
+      </row>
+      <row resolved="N" Name="feedback_csf">
+        <TableName>OINV</TableName>
+        <Name>feedback_csf</Name>
+        <Description>Feedback_csf</Description>
+        <Mandatory>N</Mandatory>
+        <Type>M</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="Delivery_MID">
+        <TableName>OINV</TableName>
+        <Name>Delivery_MID</Name>
+        <Description>Delivery MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="InitialAsk_MID">
+        <TableName>OINV</TableName>
+        <Name>InitialAsk_MID</Name>
+        <Description>Initial Ask MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="salesman_csf_MID">
+        <TableName>OINV</TableName>
+        <Name>salesman_csf_MID</Name>
+        <Description>Salesman_csf MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="responding_csf_MID">
+        <TableName>OINV</TableName>
+        <Name>responding_csf_MID</Name>
+        <Description>Responding_csf MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="delivery_csf_MID">
+        <TableName>OINV</TableName>
+        <Name>delivery_csf_MID</Name>
+        <Description>Delivery_csf MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="services_csf_MID">
+        <TableName>OINV</TableName>
+        <Name>services_csf_MID</Name>
+        <Description>Services_csf MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+      <row resolved="N" Name="feedback_csf_MID">
+        <TableName>OINV</TableName>
+        <Name>feedback_csf_MID</Name>
+        <Description>Feedback_csf MID</Description>
+        <Mandatory>N</Mandatory>
+        <Type>A</Type>
+        <Size>254</Size>
+        <EditSize>254</EditSize>
+        <SubType>0</SubType>
+      </row>
+    </CUFD>
+  </BO>
+</BOM>

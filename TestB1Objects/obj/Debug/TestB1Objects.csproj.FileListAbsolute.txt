@@ -1,0 +1,5 @@
+C:\code\abit\SAP_LIBERARY\TestB1Objects\obj\Debug\TestB1Objects.csproj.AssemblyReference.cache
+C:\code\abit\SAP_LIBERARY\TestB1Objects\obj\Debug\TestB1Objects.csproj.SuggestedBindingRedirects.cache
+C:\code\abit\SAP_LIBERARY\TestB1Objects\obj\Debug\TestB1Objects.TestForm.resources
+C:\code\abit\SAP_LIBERARY\TestB1Objects\obj\Debug\TestB1Objects.csproj.GenerateResource.cache
+C:\code\abit\SAP_LIBERARY\TestB1Objects\obj\Debug\TestB1Objects.csproj.CoreCompileInputs.cache
