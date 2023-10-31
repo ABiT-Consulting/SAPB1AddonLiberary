@@ -89,6 +89,9 @@
             this.btnCreateUDF_FROM_XML = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.tbDBServer = new System.Windows.Forms.TextBox();
+            this.btnConnectODBC = new System.Windows.Forms.Button();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbConnectionStringODBC = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +108,7 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(129, 7);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(513, 62);
@@ -113,18 +116,18 @@
             // 
             // tbXML
             // 
-            this.tbXML.Location = new System.Drawing.Point(11, 90);
-            this.tbXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbXML.Location = new System.Drawing.Point(11, 143);
+            this.tbXML.Margin = new System.Windows.Forms.Padding(2);
             this.tbXML.Multiline = true;
             this.tbXML.Name = "tbXML";
             this.tbXML.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.tbXML.Size = new System.Drawing.Size(654, 350);
+            this.tbXML.Size = new System.Drawing.Size(654, 297);
             this.tbXML.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 72);
+            this.label2.Location = new System.Drawing.Point(11, 127);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
@@ -154,7 +157,7 @@
             // tbObjID
             // 
             this.tbObjID.Location = new System.Drawing.Point(168, 448);
-            this.tbObjID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbObjID.Margin = new System.Windows.Forms.Padding(2);
             this.tbObjID.Name = "tbObjID";
             this.tbObjID.Size = new System.Drawing.Size(76, 20);
             this.tbObjID.TabIndex = 6;
@@ -162,7 +165,7 @@
             // tbKey
             // 
             this.tbKey.Location = new System.Drawing.Point(285, 448);
-            this.tbKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbKey.Margin = new System.Windows.Forms.Padding(2);
             this.tbKey.Name = "tbKey";
             this.tbKey.Size = new System.Drawing.Size(64, 20);
             this.tbKey.TabIndex = 7;
@@ -170,7 +173,7 @@
             // btnGetXML
             // 
             this.btnGetXML.Location = new System.Drawing.Point(366, 449);
-            this.btnGetXML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGetXML.Margin = new System.Windows.Forms.Padding(2);
             this.btnGetXML.Name = "btnGetXML";
             this.btnGetXML.Size = new System.Drawing.Size(56, 19);
             this.btnGetXML.TabIndex = 8;
@@ -181,7 +184,7 @@
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(427, 449);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(56, 19);
             this.btnCancel.TabIndex = 9;
@@ -192,7 +195,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(488, 449);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(56, 19);
             this.btnAdd.TabIndex = 10;
@@ -203,7 +206,7 @@
             // tbManagerPassword
             // 
             this.tbManagerPassword.Location = new System.Drawing.Point(680, 316);
-            this.tbManagerPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbManagerPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbManagerPassword.Name = "tbManagerPassword";
             this.tbManagerPassword.PasswordChar = '*';
             this.tbManagerPassword.Size = new System.Drawing.Size(144, 20);
@@ -212,7 +215,7 @@
             // tbSystemPassword
             // 
             this.tbSystemPassword.Location = new System.Drawing.Point(680, 353);
-            this.tbSystemPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSystemPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbSystemPassword.Name = "tbSystemPassword";
             this.tbSystemPassword.PasswordChar = '*';
             this.tbSystemPassword.Size = new System.Drawing.Size(144, 20);
@@ -241,7 +244,7 @@
             // btnConnect
             // 
             this.btnConnect.Location = new System.Drawing.Point(842, 361);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(2);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(143, 24);
             this.btnConnect.TabIndex = 15;
@@ -262,7 +265,7 @@
             // tbServer
             // 
             this.tbServer.Location = new System.Drawing.Point(680, 28);
-            this.tbServer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbServer.Margin = new System.Windows.Forms.Padding(2);
             this.tbServer.Name = "tbServer";
             this.tbServer.Size = new System.Drawing.Size(144, 20);
             this.tbServer.TabIndex = 16;
@@ -280,7 +283,7 @@
             // tbLicenseServer
             // 
             this.tbLicenseServer.Location = new System.Drawing.Point(680, 70);
-            this.tbLicenseServer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbLicenseServer.Margin = new System.Windows.Forms.Padding(2);
             this.tbLicenseServer.Name = "tbLicenseServer";
             this.tbLicenseServer.Size = new System.Drawing.Size(144, 20);
             this.tbLicenseServer.TabIndex = 18;
@@ -298,7 +301,7 @@
             // tbCompanyDB
             // 
             this.tbCompanyDB.Location = new System.Drawing.Point(680, 142);
-            this.tbCompanyDB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbCompanyDB.Margin = new System.Windows.Forms.Padding(2);
             this.tbCompanyDB.Name = "tbCompanyDB";
             this.tbCompanyDB.Size = new System.Drawing.Size(144, 20);
             this.tbCompanyDB.TabIndex = 20;
@@ -316,7 +319,7 @@
             // tbDBUser
             // 
             this.tbDBUser.Location = new System.Drawing.Point(680, 186);
-            this.tbDBUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbDBUser.Margin = new System.Windows.Forms.Padding(2);
             this.tbDBUser.Name = "tbDBUser";
             this.tbDBUser.Size = new System.Drawing.Size(144, 20);
             this.tbDBUser.TabIndex = 22;
@@ -334,7 +337,7 @@
             // tbUserName
             // 
             this.tbUserName.Location = new System.Drawing.Point(680, 228);
-            this.tbUserName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUserName.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(144, 20);
             this.tbUserName.TabIndex = 24;
@@ -352,7 +355,7 @@
             // tbServerType
             // 
             this.tbServerType.Location = new System.Drawing.Point(680, 275);
-            this.tbServerType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbServerType.Margin = new System.Windows.Forms.Padding(2);
             this.tbServerType.Name = "tbServerType";
             this.tbServerType.Size = new System.Drawing.Size(144, 20);
             this.tbServerType.TabIndex = 26;
@@ -360,7 +363,7 @@
             // Clear
             // 
             this.Clear.Location = new System.Drawing.Point(548, 449);
-            this.Clear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Clear.Margin = new System.Windows.Forms.Padding(2);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(56, 19);
             this.Clear.TabIndex = 40;
@@ -371,7 +374,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(609, 449);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(119, 19);
             this.button2.TabIndex = 41;
@@ -382,7 +385,7 @@
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(731, 449);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(119, 19);
             this.button4.TabIndex = 42;
@@ -409,7 +412,7 @@
             "xet_NodesAsProperties",
             "xet_ExportImportMode"});
             this.cbxmltype.Location = new System.Drawing.Point(51, 448);
-            this.cbxmltype.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxmltype.Margin = new System.Windows.Forms.Padding(2);
             this.cbxmltype.Name = "cbxmltype";
             this.cbxmltype.Size = new System.Drawing.Size(74, 21);
             this.cbxmltype.TabIndex = 46;
@@ -560,7 +563,7 @@
             // btncnxp
             // 
             this.btncnxp.Location = new System.Drawing.Point(842, 389);
-            this.btncnxp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btncnxp.Margin = new System.Windows.Forms.Padding(2);
             this.btncnxp.Name = "btncnxp";
             this.btncnxp.Size = new System.Drawing.Size(143, 24);
             this.btncnxp.TabIndex = 66;
@@ -571,7 +574,7 @@
             // btnConnectDIS
             // 
             this.btnConnectDIS.Location = new System.Drawing.Point(842, 417);
-            this.btnConnectDIS.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConnectDIS.Margin = new System.Windows.Forms.Padding(2);
             this.btnConnectDIS.Name = "btnConnectDIS";
             this.btnConnectDIS.Size = new System.Drawing.Size(143, 24);
             this.btnConnectDIS.TabIndex = 67;
@@ -581,7 +584,7 @@
             // tbUpdate
             // 
             this.tbUpdate.Location = new System.Drawing.Point(488, 472);
-            this.tbUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.tbUpdate.Name = "tbUpdate";
             this.tbUpdate.Size = new System.Drawing.Size(56, 19);
             this.tbUpdate.TabIndex = 68;
@@ -645,7 +648,7 @@
             // tbSLDServer
             // 
             this.tbSLDServer.Location = new System.Drawing.Point(682, 109);
-            this.tbSLDServer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSLDServer.Margin = new System.Windows.Forms.Padding(2);
             this.tbSLDServer.Name = "tbSLDServer";
             this.tbSLDServer.Size = new System.Drawing.Size(144, 20);
             this.tbSLDServer.TabIndex = 73;
@@ -663,7 +666,7 @@
             // btnCreateUDF_FROM_XML
             // 
             this.btnCreateUDF_FROM_XML.Location = new System.Drawing.Point(850, 327);
-            this.btnCreateUDF_FROM_XML.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateUDF_FROM_XML.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateUDF_FROM_XML.Name = "btnCreateUDF_FROM_XML";
             this.btnCreateUDF_FROM_XML.Size = new System.Drawing.Size(120, 30);
             this.btnCreateUDF_FROM_XML.TabIndex = 76;
@@ -689,11 +692,40 @@
             this.tbDBServer.Size = new System.Drawing.Size(144, 20);
             this.tbDBServer.TabIndex = 77;
             // 
+            // btnConnectODBC
+            // 
+            this.btnConnectODBC.Location = new System.Drawing.Point(567, 85);
+            this.btnConnectODBC.Name = "btnConnectODBC";
+            this.btnConnectODBC.Size = new System.Drawing.Size(75, 23);
+            this.btnConnectODBC.TabIndex = 79;
+            this.btnConnectODBC.Text = "Connect";
+            this.btnConnectODBC.UseVisualStyleBackColor = true;
+            this.btnConnectODBC.Click += new System.EventHandler(this.btnConnectODBC_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(27, 93);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 13);
+            this.label22.TabIndex = 80;
+            this.label22.Text = "Connection String:";
+            // 
+            // tbConnectionStringODBC
+            // 
+            this.tbConnectionStringODBC.Location = new System.Drawing.Point(132, 86);
+            this.tbConnectionStringODBC.Name = "tbConnectionStringODBC";
+            this.tbConnectionStringODBC.Size = new System.Drawing.Size(429, 20);
+            this.tbConnectionStringODBC.TabIndex = 81;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 525);
+            this.Controls.Add(this.tbConnectionStringODBC);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.btnConnectODBC);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.tbDBServer);
             this.Controls.Add(this.btnCreateUDF_FROM_XML);
@@ -755,7 +787,7 @@
             this.Controls.Add(this.tbXML);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TestForm";
             this.Text = "SBO Application";
             this.Load += new System.EventHandler(this.TestForm_Load);
@@ -827,5 +859,8 @@
         private System.Windows.Forms.Button btnCreateUDF_FROM_XML;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox tbDBServer;
+        private System.Windows.Forms.Button btnConnectODBC;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox tbConnectionStringODBC;
     }
 }

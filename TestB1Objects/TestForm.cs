@@ -714,5 +714,25 @@ namespace TestB1Objects
             }
             #endregion
         }
+
+        private void btnConnectODBC_Click(object sender, EventArgs e)
+        {
+            //todo:test odbc connection 
+            var connectionstring = tbConnectionStringODBC.Text;
+            var connection = new System.Data.Odbc.OdbcConnection(connectionstring);
+            try
+            {
+                connection.Open();
+                MessageBox.Show("Connection Successfull");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
     }
 }
