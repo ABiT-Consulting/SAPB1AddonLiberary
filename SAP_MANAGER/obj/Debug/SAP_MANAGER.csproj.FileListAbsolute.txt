@@ -1,0 +1,9 @@
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\bin\Debug\SAP_MANAGER.exe.config
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\bin\Debug\SAP_MANAGER.exe
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\bin\Debug\SAP_MANAGER.pdb
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\bin\Debug\SAPBusinessOneSDK.dll
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\obj\Debug\SAP_MANAGER.csproj.AssemblyReference.cache
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\obj\Debug\SAP_MANAGER.csproj.CoreCompileInputs.cache
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\obj\Debug\SAP_MANA.330F3F49.Up2Date
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\obj\Debug\SAP_MANAGER.exe
+D:\Code\SAPB1AddonLiberary\SAP_MANAGER\obj\Debug\SAP_MANAGER.pdb
